@@ -7,7 +7,7 @@ ENV PATH="/opt/venv/bin:${PATH}"
 
 RUN apt-get update && apt-get install --no-install-recommends -y build-essential libssl-dev libffi-dev libyaml-dev && python -m pip install --upgrade pip
 
-RUN pip install --no-cache-dir cmdserver
+RUN pip install --no-cache-dir ezmote-cmdserver
 
 FROM python:3.9-slim-bullseye
 
