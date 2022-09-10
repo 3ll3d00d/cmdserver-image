@@ -11,7 +11,7 @@ RUN pip install --no-cache-dir ezmote-cmdserver
 
 FROM python:3.9-slim-bullseye
 
-ENV CMDSERVER_CONFIG_HOME=/config
+ENV CMDSERVER_CONFIG_HOME=/config/${CONFIG_NAME}
 
 COPY --from=builder /opt/venv /opt/venv
 
