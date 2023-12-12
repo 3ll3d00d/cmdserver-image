@@ -1,4 +1,4 @@
-FROM python:3.9-slim-bullseye as builder
+FROM python:3.12-slim-bookworm as builder
 
 WORKDIR /app
 
@@ -9,7 +9,7 @@ RUN apt-get update && apt-get install --no-install-recommends -y build-essential
 
 RUN pip install --no-cache-dir ezmote-cmdserver
 
-FROM python:3.9-slim-bullseye
+FROM python:3.12-slim-bookworm
 
 COPY --from=builder /opt/venv /opt/venv
 
