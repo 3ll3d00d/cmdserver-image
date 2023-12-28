@@ -21,8 +21,8 @@ ENV PATH="/opt/venv/bin:${PATH}"
 RUN apt-get update && apt-get install --no-install-recommends -y curl
 
 HEALTHCHECK --interval=10s --timeout=2s \
-  CMD curl -f -s --show-error http://localhost:8080/api/1/version || exit 1
+  CMD curl -f -s --show-error http://localhost:53199/api/1/version || exit 1
 
-EXPOSE 8080
+EXPOSE 53199
 
 CMD [ "cmdserver" ]
